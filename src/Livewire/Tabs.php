@@ -2,32 +2,28 @@
 
 namespace MrShaneBarron\Tabs\Livewire;
 
-use Illuminate\Contracts\View\View;
 use Livewire\Component;
 
 class Tabs extends Component
 {
-    public string $active;
-    public string $style = 'underline';
-    public string $orientation = 'horizontal';
+    public ?string $active = null;
     public array $tabs = [];
+    public string $variant = 'default';
 
-    public function mount(string $active = '', string $style = 'underline', string $orientation = 'horizontal', array $tabs = []): void
+    public function mount(?string $active = null, array $tabs = [], string $variant = 'default'): void
     {
-        $this->active = $active ?: (count($tabs) > 0 ? array_key_first($tabs) : '');
-        $this->style = $style;
-        $this->orientation = $orientation;
         $this->tabs = $tabs;
+        $this->variant = $variant;
+        $this->active = $active ?? (count($tabs) > 0 ? array_key_first($tabs) : null);
     }
 
     public function setActive(string $key): void
     {
         $this->active = $key;
-        $this->dispatch('tab-changed', key: $key);
     }
 
-    public function render(): View
+    public function render()
     {
-        return view('ld-tabs::components.tabs');
+        return view('ld-tabs::livewire.tabs');
     }
 }

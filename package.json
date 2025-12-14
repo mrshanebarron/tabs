@@ -1,0 +1,12 @@
+{
+    "name": "@mrshanebarron/tabs",
+    "version": "1.0.0",
+    "description": "Tabs component - Vue 3",
+    "main": "resources/js/index.js",
+    "files": ["resources/js", "resources/css"],
+    "keywords": ["vue", "vue3", "tabs", "laravel"],
+    "author": "Shane Barron <mrshanebarron@gmail.com>",
+    "license": "MIT",
+    "peerDependencies": {"vue": "^3.0.0"},
+    "repository": {"type": "git", "url": "https://github.com/mrshanebarron/tabs.git"}
+}

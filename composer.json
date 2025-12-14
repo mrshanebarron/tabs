@@ -1,11 +1,23 @@
 {
     "name": "mrshanebarron/tabs",
-    "description": "Tab navigation components for Laravel",
+    "description": "Tabs component for Laravel - supports Livewire and Vue",
     "keywords": ["laravel", "livewire", "vue", "tabs", "navigation"],
     "license": "MIT",
     "authors": [{"name": "Shane Barron", "email": "mrshanebarron@gmail.com"}],
-    "require": {"php": "^8.1", "illuminate/support": "^10.0|^11.0|^12.0", "livewire/livewire": "^3.0"},
-    "autoload": {"psr-4": {"LaravelDesign\\Tabs\\": "src/"}},
-    "extra": {"laravel": {"providers": ["LaravelDesign\\Tabs\\TabsServiceProvider"]}},
-    "minimum-stability": "stable", "prefer-stable": true
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^10.0|^11.0|^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MrShaneBarron\\Tabs\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": ["MrShaneBarron\\Tabs\\TabsServiceProvider"]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }
