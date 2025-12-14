@@ -24,6 +24,6 @@ class Tabs extends Component
 
     public function render()
     {
-        return view('ld-tabs::livewire.tabs');
+        return view('sb-tabs::livewire.tabs');
     }
 }

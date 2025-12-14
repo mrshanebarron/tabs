@@ -26,7 +26,7 @@
 import { ref, computed, provide } from 'vue';
 
 export default {
-  name: 'LdTabs',
+  name: 'SbTabs',
   props: {
     tabs: { type: Object, required: true },
     defaultActive: { type: String, default: null },

@@ -1,5 +1,5 @@
 @php
-    $variantConfig = config('ld-tabs.variants.' . $variant, config('ld-tabs.variants.default'));
+    $variantConfig = config('sb-tabs.variants.' . $variant, config('sb-tabs.variants.default'));
 @endphp
 
 <div>
@@ -19,7 +19,7 @@
     </div>
 
     {{-- Tab Panels --}}
-    <div class="{{ config('ld-tabs.panel') }}">
+    <div class="{{ config('sb-tabs.panel') }}">
         {{ $slot }}
     </div>
 </div>

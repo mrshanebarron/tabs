@@ -5,7 +5,7 @@ export { Tabs, TabPanel };
 
 export default {
   install(app) {
-    app.component('LdTabs', Tabs);
-    app.component('LdTabPanel', TabPanel);
+    app.component('SbTabs', Tabs);
+    app.component('SbTabPanel', TabPanel);
   }
 };

@@ -12,7 +12,7 @@
 import { inject, computed } from 'vue';
 
 export default {
-  name: 'LdTabPanel',
+  name: 'SbTabPanel',
   props: {
     tabKey: { type: String, required: true }
   },
