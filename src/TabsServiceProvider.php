@@ -8,7 +8,7 @@ class TabsServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/tabs.php', 'sb-tabs');
+        $this->mergeConfigFrom(__DIR__ . '/../config/sb-tabs.php', 'sb-tabs');
     }
 
     public function boot(): void
@@ -21,7 +21,7 @@ class TabsServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../config/tabs.php' => config_path('sb-tabs.php'),
+                __DIR__ . '/../config/sb-tabs.php' => config_path('sb-tabs.php'),
             ], 'sb-tabs-config');
         }
     }
