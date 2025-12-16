@@ -20,6 +20,6 @@
 
     {{-- Tab Panels --}}
     <div class="{{ config('sb-tabs.panel') }}">
-        {{ $slot }}
+        {{ $slot ?? '' }}
     </div>
 </div>
