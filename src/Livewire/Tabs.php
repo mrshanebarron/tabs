@@ -12,6 +12,7 @@ class Tabs extends Component
 
     public function mount(?string $active = null, array $tabs = [], string $variant = 'default'): void
     {
+        // Tabs should be: ['key' => ['label' => '...', 'content' => '...']]
         $this->tabs = $tabs;
         $this->variant = $variant;
         $this->active = $active ?? (count($tabs) > 0 ? array_key_first($tabs) : null);

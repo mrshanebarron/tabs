@@ -5,7 +5,7 @@
 <div>
     {{-- Tab List --}}
     <div class="{{ $variantConfig['list'] }}" role="tablist">
-        @foreach($tabs as $key => $label)
+        @foreach($tabs as $key => $tab)
             <button
                 wire:click="setActive('{{ $key }}')"
                 class="{{ $active === $key ? $variantConfig['tab_active'] : $variantConfig['tab'] }}"
@@ -13,13 +13,21 @@
                 aria-selected="{{ $active === $key ? 'true' : 'false' }}"
                 aria-controls="panel-{{ $key }}"
             >
-                {{ $label }}
+                {{ is_array($tab) ? $tab['label'] : $tab }}
             </button>
         @endforeach
     </div>
 
     {{-- Tab Panels --}}
     <div class="{{ config('sb-tabs.panel') }}">
-        {{ $slot ?? '' }}
+        @foreach($tabs as $key => $tab)
+            <div
+                id="panel-{{ $key }}"
+                role="tabpanel"
+                class="{{ $active === $key ? '' : 'hidden' }}"
+            >
+                {!! is_array($tab) && isset($tab['content']) ? $tab['content'] : '' !!}
+            </div>
+        @endforeach
     </div>
 </div>
